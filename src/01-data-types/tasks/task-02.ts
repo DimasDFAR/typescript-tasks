@@ -19,9 +19,9 @@ const productPrice: number = 850000
 const productCode: String = "KBR-001"
 const discount: number = 0.25
 const discountedPrice: number = productPrice - (productPrice * discount)
-const amountToBuy: int = 2
-const freeShipping: bool = true
-const totalPrice: number = discountedPrice*amountToBuy
-const stock: int = 18
+const amountToBuy: number = 2
+const freeShipping: boolean = true
+const totalPrice: number = discountedPrice * amountToBuy
+const stock: number = 18
 
-console.log({ productPrice, productCode, discount, discountedPrice, freeShipping, amountToBuy, totalPrice, stock})
+console.log({ productPrice, productCode, discount, discountedPrice, freeShipping, amountToBuy, totalPrice, stock })
