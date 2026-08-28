@@ -14,3 +14,14 @@
  * 4. Declare all variables in TypeScript.
  * 5. Display the product data using console.log.
  */
+
+const productPrice: number = 850000
+const productCode: String = "KBR-001"
+const discount: number = 0.25
+const discountedPrice: number = productPrice - (productPrice * discount)
+const amountToBuy: int = 2
+const freeShipping: bool = true
+const totalPrice: number = discountedPrice*amountToBuy
+const stock: int = 18
+
+console.log({ productPrice, productCode, discount, discountedPrice, freeShipping, amountToBuy, totalPrice, stock})
