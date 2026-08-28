@@ -37,3 +37,5 @@ const student3: Student = {
     age: 18,
     isActive: false
 }
+
+console.log({student1,student2,student3})

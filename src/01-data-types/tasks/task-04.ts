@@ -11,4 +11,11 @@
  * display the book data using console.log.
  */
 
-const name: String = "haha"
+type Book = {
+    ISBNnumber: number,
+    Title: String,
+    authorName: String,
+    pages: number,
+    bookCategory: String,
+    availableToBorrow: boolean,
+}
