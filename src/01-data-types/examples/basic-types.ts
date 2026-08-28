@@ -6,7 +6,7 @@
 
 // Primitive types
 const studentName: string = "Alice";
-const age: number = 20;
+const age: number = 20.1;
 const isEnrolled: boolean = true;
 
 // Arrays
