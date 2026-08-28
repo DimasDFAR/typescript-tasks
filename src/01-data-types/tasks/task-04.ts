@@ -19,3 +19,32 @@ type Book = {
     bookCategory: String,
     availableToBorrow: boolean,
 }
+
+const book1: Book = {
+    ISBNnumber: 9780306406157,
+    Title: "Until Then",
+    authorName: "Brody Robinson",
+    pages: 132,
+    bookCategory: "Fiction",
+    availableToBorrow: false,
+}
+
+const book2: Book = {
+    ISBNnumber: 9780306406189,
+    Title: "Forever From Now",
+    authorName: "Alex Anderson",
+    pages: 254,
+    bookCategory: "Romance",
+    availableToBorrow: true,
+}
+
+const book3: Book = {
+    ISBNnumber: 9780306406468,
+    Title: "The Cat in The Hat",
+    authorName: "Dr Seuss",
+    pages: 43,
+    bookCategory: "Comedy",
+    availableToBorrow: false,
+}
+
+console.log(book1, book2, book3)
