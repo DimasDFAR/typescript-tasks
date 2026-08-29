@@ -11,10 +11,10 @@
  */
 
 type Student = {
-    studentId: string
-    fullName: string
-    age: number
-    isActive: boolean
+    studentId: string,
+    fullName: string,
+    age: number,
+    isActive: boolean,
 }
 
 const student1: Student = {
