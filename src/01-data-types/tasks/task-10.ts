@@ -17,43 +17,52 @@
  * 3. Display the product data using console.log.
  */
 
+
 type Product = {
-    productCode: string,
-    productName: string,
-    price: number,
-    quantity: number,
-    freeShipping: boolean,
+    productCode: string
+    productName: string
+    price: number
+    quantity: number
+    freeShipping: boolean
+}
+
+const keyboard: Product = {
+    productCode: "KB001",
+    productName: "Mechanical Keyboard",
+    price: 850000,
+    quantity: 1,
+    freeShipping: true
+}
+
+const mouse: Product = {
+    productCode: "MS002",
+    productName: "Wireless Mouse",
+    price: 275000,
+    quantity: 2,
+    freeShipping: true
+}
+
+const ssd: Product = {
+    productCode: "HD003",
+    productName: "External SSD 1TB",
+    price: 1650000,
+    quantity: 1,
+    freeShipping: false
+}
+
+const headset: Product = {
+    productCode: "HP004",
+    productName: "Gaming Headset",
+    price: 720000,
+    quantity: 1,
+    freeShipping: true
 }
 
 const products: Product[] = [
-    {
-        productCode: "KB001",
-        productName: "Mechanical Keyboard",
-        price: 850000,
-        quantity: 1,
-        freeShipping: true
-    },
-    {
-        productCode: "MS002",
-        productName: "Wireless Mouse",
-        price: 275000,
-        quantity: 2,
-        freeShipping: true
-    },
-    {
-        productCode: "HD003",
-        productName: "External SSD 1TB",
-        price: 1650000,
-        quantity: 1,
-        freeShipping: false
-    },
-    {
-        productCode: "HP004",
-        productName: "Gaming Headset",
-        price: 720000,
-        quantity: 1,
-        freeShipping: true
-    }
+    keyboard,
+    mouse,
+    ssd,
+    headset
 ]
 
 console.log(products)

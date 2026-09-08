@@ -11,47 +11,47 @@
  */
 
 type productInfo = {
-    productCode: String,
-    productName: String,
-    sellingPrice: number,
-    stockQuantity: number,
-    productWeight: number,
-    rating: number,
-    discounted: boolean,
+    productCode: string
+    productName: string
+    sellingPrice: number
+    stockQuantity: number
+    productWeight: number
+    rating: number
+    discounted: boolean
 }
 
-const product1: productInfo = {
-    productCode: "3290485",
-    productName: "Toy",
-    sellingPrice: 20396,
-    stockQuantity: 23,
-    productWeight: 123,
-    rating: 5,
-    discounted: true,
+const electronicItem: productInfo = {
+    productCode: "PR1024",
+    productName: "Keyboard",
+    sellingPrice: 475000,
+    stockQuantity: 35,
+    productWeight: 650,
+    rating: 4,
+    discounted: true
 }
 
-const product2: productInfo = {
-    productCode: "329035485",
-    productName: "Stove",
-    sellingPrice: 3475367,
-    stockQuantity: 63,
-    productWeight: 123,
+const kitchenItem: productInfo = {
+    productCode: "PR2058",
+    productName: "Rice Cooker",
+    sellingPrice: 625000,
+    stockQuantity: 18,
+    productWeight: 2100,
     rating: 5,
-    discounted: false,
+    discounted: false
 }
 
-const product3: productInfo = {
-    productCode: "3234655485",
-    productName: "Laptop",
-    sellingPrice: 3452346,
-    stockQuantity: 85,
-    productWeight: 23,
-    rating: 5,
-    discounted: false,
+const computerItem: productInfo = {
+    productCode: "PR3147",
+    productName: "Monitor",
+    sellingPrice: 1850000,
+    stockQuantity: 12,
+    productWeight: 3200,
+    rating: 4,
+    discounted: true
 }
 
 console.log({
-    product1,
-    product2,
-    product3,
+    electronicItem,
+    kitchenItem,
+    computerItem
 })

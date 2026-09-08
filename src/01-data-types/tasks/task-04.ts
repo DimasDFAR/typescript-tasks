@@ -11,40 +11,41 @@
  * display the book data using console.log.
  */
 
+
 type Book = {
-    ISBNnumber: number,
-    Title: String,
-    authorName: String,
-    pages: number,
-    bookCategory: String,
-    availableToBorrow: boolean,
+    ISBNnumber: number
+    Title: string
+    authorName: string
+    pages: number
+    bookCategory: string
+    availableToBorrow: boolean
 }
 
-const book1: Book = {
-    ISBNnumber: 9780306406157,
-    Title: "Until Then",
-    authorName: "Brody Robinson",
-    pages: 132,
-    bookCategory: "Fiction",
-    availableToBorrow: false,
+const fantasyBook: Book = {
+    ISBNnumber: 9780132350884,
+    Title: "The Hidden Kingdom",
+    authorName: "James Peterson",
+    pages: 318,
+    bookCategory: "Fantasy",
+    availableToBorrow: true
 }
 
-const book2: Book = {
-    ISBNnumber: 9780306406189,
-    Title: "Forever From Now",
-    authorName: "Alex Anderson",
-    pages: 254,
-    bookCategory: "Romance",
-    availableToBorrow: true,
+const mysteryBook: Book = {
+    ISBNnumber: 9780262033848,
+    Title: "The Silent Room",
+    authorName: "Emily Carter",
+    pages: 276,
+    bookCategory: "Mystery",
+    availableToBorrow: false
 }
 
-const book3: Book = {
-    ISBNnumber: 9780306406468,
-    Title: "The Cat in The Hat",
-    authorName: "Dr Seuss",
-    pages: 43,
-    bookCategory: "Comedy",
-    availableToBorrow: false,
+const scienceBook: Book = {
+    ISBNnumber: 9781491950296,
+    Title: "Journey Through Space",
+    authorName: "William Harris",
+    pages: 194,
+    bookCategory: "Science",
+    availableToBorrow: true
 }
 
-console.log(book1, book2, book3)
+console.log(fantasyBook, mysteryBook, scienceBook)

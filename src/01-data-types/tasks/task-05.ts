@@ -11,43 +11,47 @@
  */
 
 type employeeAttendance = {
-    ID: String,
-    name: String
-    date: String,
-    checkInTime: String,
-    checkOutTime: String,
-    totalWorkingHours: number,
-    wasPresent: boolean,
+    ID: string
+    name: string
+    date: string
+    checkInTime: string
+    checkOutTime: string
+    totalWorkingHours: number
+    wasPresent: boolean
 }
 
-const employee1: employeeAttendance = {
-    ID: "87D9FD",
-    name: "Alexander Hugo",
-    date: "3 February 2026",
-    checkInTime: "4:30 am",
-    checkOutTime: "6:30 pm",
-    totalWorkingHours: 14,
-    wasPresent: true,
+const morningEmployee: employeeAttendance = {
+    ID: "EMP102",
+    name: "Daniel Anderson",
+    date: "10 March 2026",
+    checkInTime: "7:00 am",
+    checkOutTime: "3:00 pm",
+    totalWorkingHours: 8,
+    wasPresent: true
 }
 
-const employee2: employeeAttendance = {
-    ID: "49D9SD",
-    name: "Robert Posh",
-    date: "4 February 2026",
-    checkInTime: "4:30 am",
-    checkOutTime: "6:30 pm",
-    totalWorkingHours: 14,
-    wasPresent: true,
+const afternoonEmployee: employeeAttendance = {
+    ID: "EMP205",
+    name: "Michael Carter",
+    date: "11 March 2026",
+    checkInTime: "8:30 am",
+    checkOutTime: "4:30 pm",
+    totalWorkingHours: 8,
+    wasPresent: true
 }
 
-const employee3: employeeAttendance = {
-    ID: "59D9SD",
-    name: "Timmy Josh",
-    date: "4 February 2026",
-    checkInTime: "4:30 am",
-    checkOutTime: "6:30 pm",
-    totalWorkingHours: 14,
-    wasPresent: true,
+const absentEmployee: employeeAttendance = {
+    ID: "EMP318",
+    name: "Sophia Williams",
+    date: "11 March 2026",
+    checkInTime: "N/A",
+    checkOutTime: "N/A",
+    totalWorkingHours: 0,
+    wasPresent: false
 }
 
-console.log({employee1, employee2, employee3})
+console.log({
+    morningEmployee,
+    afternoonEmployee,
+    absentEmployee
+})

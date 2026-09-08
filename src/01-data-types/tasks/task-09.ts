@@ -16,31 +16,38 @@
  */
 
 type participantInfo = {
-    studentID: string,
-    name: string,
-    age: number,
-    hasPaid: boolean,
+    studentID: string
+    name: string
+    age: number
+    hasPaid: boolean
 }
 
-const participantData: participantInfo[] = [
-    {
-        studentID: "ST001",
-        name: "Ahmad Fauzi",
-        age: 16,
-        hasPaid: true,
-    },
-    {
-        studentID: "ST002",
-        name: "Siti Nurhaliza",
-        age: 17,
-        hasPaid: false,
-    },
-    {
-        studentID: "ST003",
-        name: "Budi Santoso",
-        age: 16,
-        hasPaid: true,
-    },
+const participantA: participantInfo = {
+    studentID: "ST101",
+    name: "Rizky Pratama",
+    age: 15,
+    hasPaid: true
+}
+
+const participantB: participantInfo = {
+    studentID: "ST102",
+    name: "Dewi Lestari",
+    age: 16,
+    hasPaid: false
+}
+
+const participantC: participantInfo = {
+    studentID: "ST103",
+    name: "Fajar Ramadhan",
+    age: 17,
+    hasPaid: true
+}
+
+const participants: participantInfo[] = [
+    participantA,
+    participantB,
+    participantC
 ]
 
-console.log(participantData)
+console.log(participants)
+

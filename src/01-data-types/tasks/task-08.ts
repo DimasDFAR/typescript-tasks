@@ -23,43 +23,59 @@
  */
 
 type Temperature = {
-    time: string,
-    temperature: number,
+    time: string
+    temperature: number
 }
 
-const temperatures: Temperature[] = [
-    {
-        time: "08:00",
-        temperature: 24.5
-    },
-    {
-        time: "09:00",
-        temperature: 25.1
-    },
-    {
-        time: "10:00",
-        temperature: 26.8
-    },
-    {
-        time: "11:00",
-        temperature: 28.4
-    },
-    {
-        time: "12:00",
-        temperature: 30.2
-    },
-    {
-        time: "13:00",
-        temperature: 31.1
-    },
-    {
-        time: "14:00",
-        temperature: 30.7
-    },
-    {
-        time: "15:00",
-        temperature: 29.3
-    }
+const morningReading: Temperature = {
+    time: "08:00",
+    temperature: 24.5
+}
+
+const secondReading: Temperature = {
+    time: "09:00",
+    temperature: 25.1
+}
+
+const lateMorning: Temperature = {
+    time: "10:00",
+    temperature: 26.8
+}
+
+const noonApproach: Temperature = {
+    time: "11:00",
+    temperature: 28.4
+}
+
+const noonReading: Temperature = {
+    time: "12:00",
+    temperature: 30.2
+}
+
+const afternoonStart: Temperature = {
+    time: "13:00",
+    temperature: 31.1
+}
+
+const afternoonReading: Temperature = {
+    time: "14:00",
+    temperature: 30.7
+}
+
+const finalReading: Temperature = {
+    time: "15:00",
+    temperature: 29.3
+}
+
+const temperatureRecords: Temperature[] = [
+    morningReading,
+    secondReading,
+    lateMorning,
+    noonApproach,
+    noonReading,
+    afternoonStart,
+    afternoonReading,
+    finalReading
 ]
 
-console.log(temperatures)
+console.log(temperatureRecords)

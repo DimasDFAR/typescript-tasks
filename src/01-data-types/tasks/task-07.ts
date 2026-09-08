@@ -13,39 +13,45 @@
  */
 
 type StudentCourse = {
-    studentId: string,
-    fullName: string,
-    grade: number,
-    courseID: string,
-    courseTitle: string,
-    instructorName: string,
+    studentId: string
+    fullName: string
+    grade: number
+    courseID: string
+    courseTitle: string
+    instructorName: string
 }
 
-const course1: StudentCourse = {
-    studentId: "987ASDA089",
-    fullName: "Agus Prakoso",
-    grade: 88,
-    courseID: "CS101",
-    courseTitle: "Introduction to Programming",
-    instructorName: "Budi Santoso",
+const programmingStudent: StudentCourse = {
+    studentId: "ST2045",
+    fullName: "Raka Firmansyah",
+    grade: 85,
+    courseID: "PY101",
+    courseTitle: "Python Fundamentals",
+    instructorName: "Dian Prasetyo"
 }
 
-const course2: StudentCourse = {
-    studentId: "456QWER123",
-    fullName: "Ayu Lestari",
-    grade: 92,
-    courseID: "WD202",
-    courseTitle: "Web Development",
-    instructorName: "Siti Rahmawati",
+const webStudent: StudentCourse = {
+    studentId: "ST3178",
+    fullName: "Nadia Permata",
+    grade: 91,
+    courseID: "WD205",
+    courseTitle: "Frontend Development",
+    instructorName: "Rina Maharani"
 }
 
-const course3: StudentCourse = {
-    studentId: "321ZXCV567",
-    fullName: "Bagas Saputra",
-    grade: 79,
-    courseID: "DB303",
-    courseTitle: "Database Management",
-    instructorName: "Andi Wijaya",
+const databaseStudent: StudentCourse = {
+    studentId: "ST4296",
+    fullName: "Dimas Kurniawan",
+    grade: 76,
+    courseID: "DB310",
+    courseTitle: "Advanced Database Systems",
+    instructorName: "Fajar Hidayat"
 }
 
-console.log(course1, course2, course3)
+const registrations: StudentCourse[] = [
+    programmingStudent,
+    webStudent,
+    databaseStudent
+]
+
+console.log(registrations)

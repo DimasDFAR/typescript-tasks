@@ -15,15 +15,24 @@
  * 4. Display the student data using console.log.
  */
 
-const studentName: string = "Nadia Putri";
-const studentID: string = "ST2026045";
-const assignments: number = 88.5
-const midTerm: number = 88.5
-const finalExam: number = 91.5
-const attendanceScore: number = 100
 
+const nameOfStudent: string = "Nadia Putri"
+const studentNumber: string = "ST2026045"
 
-console.log(studentName)
-console.log(studentID)
-console.log({ assignments, midTerm, finalExam, attendanceScore })
-console.log("Nadia participates in extracurricular activities")
+const assignmentScore: number = 88.5
+const midtermScore: number = 84
+const finalScore: number = 91.5
+const attendance: number = 100
+
+const joinsExtracurricular: boolean = true
+
+console.log(nameOfStudent)
+console.log(studentNumber)
+
+console.log({
+    assignmentScore,
+    midtermScore,
+    finalScore,
+    attendance,
+    joinsExtracurricular
+})
