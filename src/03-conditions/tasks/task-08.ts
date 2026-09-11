@@ -27,3 +27,31 @@
  * 2. Implement the airline decision process.
  * 3. Display the correct message.
  */
+
+type PassengerInfo = {
+    passenger: string
+    onlineCheckIn: boolean
+    cabinClass: "Business" | "Economy"
+    baggageWeight: number
+}
+
+const passenger: PassengerInfo = {
+    passenger: "Fajar Nugroho",
+    onlineCheckIn: true,
+    cabinClass: "Economy",
+    baggageWeight: 24
+}
+
+if (!passenger.onlineCheckIn) {
+    console.log("Please complete online check-in first.")
+} else {
+    if (passenger.baggageWeight > 20) {
+        if (passenger.cabinClass === "Business") {
+            console.log("Extra baggage allowed.")
+        } else {
+            console.log("Additional baggage fee required.")
+        }
+    } else {
+        console.log("Proceeding to boarding pass printing.")
+    }
+}
