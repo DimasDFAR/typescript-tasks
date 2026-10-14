@@ -54,3 +54,79 @@ const submissions = [
         score: 96
     }
 ];
+
+function countTotalStudents(submissions: any[]): number {
+    return submissions.length;
+}
+
+function countSubmittedAssignments(submissions: any[]): number {
+    let count = 0;
+    for (let i = 0; i < submissions.length; i++) {
+        if (submissions[i].submitted) {
+            count++;
+        }
+    }
+    return count;
+}
+
+function countMissingAssignments(submissions: any[]): number {
+    return countTotalStudents(submissions) - countSubmittedAssignments(submissions);
+}
+
+function countPassedStudents(submissions: any[]): number {
+    let count = 0;
+    for (let i = 0; i < submissions.length; i++) {
+        if (submissions[i].submitted && submissions[i].score >= 75) {
+            count++;
+        }
+    }
+    return count;
+}
+
+function countStudentsRequiringRevision(submissions: any[]): number {
+    let count = 0;
+    for (let i = 0; i < submissions.length; i++) {
+        if (submissions[i].submitted && submissions[i].score < 75) {
+            count++;
+        }
+    }
+    return count;
+}
+
+function calculateAverageScore(submissions: any[]): number {
+    const total = submissions.reduce((sum, submission) => sum + submission.score, 0);
+    return total / countTotalStudents(submissions);
+}
+
+function findHighestScore(submissions: any[]): number {
+    let highest = submissions[0].score;
+    for (let i = 1; i < submissions.length; i++) {
+        if (submissions[i].score > highest) {
+            highest = submissions[i].score;
+        }
+    }
+    return highest;
+}
+
+function findLowestScore(submissions: any[]): number {
+    let lowest = submissions[0].score;
+    for (let i = 1; i < submissions.length; i++) {
+        if (submissions[i].score < lowest) {
+            lowest = submissions[i].score;
+        }
+    }
+    return lowest;
+}
+
+function printAssignmentReport(submissions: any[]) {
+    console.log(`Total Students: ${countTotalStudents(submissions)}`);
+    console.log(`Submitted Assignments: ${countSubmittedAssignments(submissions)}`);
+    console.log(`Missing Assignments: ${countMissingAssignments(submissions)}`);
+    console.log(`Passed Students: ${countPassedStudents(submissions)}`);
+    console.log(`Students Requiring Revision: ${countStudentsRequiringRevision(submissions)}`);
+    console.log(`Average Score: ${calculateAverageScore(submissions).toFixed(2)}`);
+    console.log(`Highest Score: ${findHighestScore(submissions)}`);
+    console.log(`Lowest Score: ${findLowestScore(submissions)}`);
+}
+
+printAssignmentReport(submissions);
