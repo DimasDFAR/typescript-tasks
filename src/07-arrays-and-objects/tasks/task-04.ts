@@ -28,3 +28,32 @@ const cart = [
         quantity: 1,
     },
 ];
+
+let subtotal = 0
+
+for (let i = 0; i < cart.length; i++) {
+    subtotal += cart[i].price * cart[i].quantity
+}
+
+let discount = 0
+
+if (subtotal >= 3000000) {
+    discount = subtotal * 0.1
+} else if (subtotal >= 2000000) {
+    discount = subtotal * 0.05
+}
+
+let finalSubtotal = subtotal - discount
+
+let expensiveProducts = []
+
+for (let i = 0; i < cart.length; i++) {
+    if (cart[i].price > 1000000) {
+        expensiveProducts.push(cart[i].product);
+    }
+}
+
+console.log({ subtotal });
+console.log({ discount });
+console.log({ finalSubtotal });
+console.log({ expensiveProducts });

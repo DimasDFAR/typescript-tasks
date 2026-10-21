@@ -22,3 +22,21 @@ const students = [
   { name: "Deni", score: 74 },
   { name: "Eka", score: 55 },
 ];
+
+let studentNames = []
+
+let passingStudents = []
+
+for (let i = 0; i < students.length; i++) {
+  studentNames.push(students[i].name)
+  if (students[i].score >= 70) {
+    const studentNameScore = {name: students[i].name, score: students[i].score}
+    passingStudents.push(studentNameScore)
+  }
+  if (students[i].name == "Citra") {
+    console.log(`Citra found! ${students[i]}`)
+  }
+}
+
+console.log({studentNames})
+console.log({passingStudents})

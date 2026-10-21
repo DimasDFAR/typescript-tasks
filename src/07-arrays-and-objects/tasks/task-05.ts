@@ -26,3 +26,40 @@ const students = [
 ];
 
 const correctAnswers = ["A", "B", "C", "A", "B"];
+
+let studentScores = []
+
+for (let i = 0; i < students.length; i++) {
+    let score = 0;
+    let studentScore = { id: students[i].id, name: students[i].name, score: 0 }
+    for (let j = 0; j < students[i].answers.length; j++) {
+        if (students[i].answers[j] === correctAnswers[j]) {
+            score += 20;
+        }
+    }
+    studentScore.score = score;
+    studentScores.push(studentScore);
+}
+
+let passingStudents = []
+let highestScoreStudent = studentScores[0]
+let totalScore = 0
+let averageScore = 0
+
+for (let i = 0; i < studentScores.length; i++) {
+    totalScore += studentScores[i].score;
+
+    if (studentScores[i].score > 70) {
+        passingStudents.push(studentScores[i].name);
+    }
+
+    if (studentScores[i].score > highestScoreStudent.score) {
+        highestScoreStudent = studentScores[i];
+    }
+}
+
+averageScore = totalScore / studentScores.length;
+
+console.log({ passingStudents });
+console.log({ highestScoreStudent });
+console.log({ averageScore });

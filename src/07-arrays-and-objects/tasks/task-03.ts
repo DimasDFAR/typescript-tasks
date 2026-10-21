@@ -23,3 +23,31 @@ const attendance = [
     { studentId: 3, status: "present" },
     { studentId: 4, status: "late" },
 ];
+
+let presentStudents = []
+
+let absentStudents = []
+
+let lateStudents = []
+
+let studentStatus = []
+
+for (let i = 0; i < students.length; i++) {
+    const student = students[i];
+    const record = attendance.find((a) => a.studentId === student.id);
+    if (record) {
+        if (record.status === "present") {
+            presentStudents.push(student.name);
+        } else if (record.status === "absent") {
+            absentStudents.push(student.name);
+        } else if (record.status === "late") {
+            lateStudents.push(student.name);
+        }
+        studentStatus.push({ name: student.name, status: record.status });
+    }
+}
+
+console.log({ presentStudents });
+console.log({ absentStudents });
+console.log({ lateStudents });
+console.log({ studentStatus });

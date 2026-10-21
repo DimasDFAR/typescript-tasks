@@ -45,3 +45,24 @@ const products = [
         stock: 3,
     },
 ];
+
+let availableProducts = []
+
+let productNames = []
+
+let totalValue = 0
+
+const sortedProducts = products.sort((a, b) => b.price - a.price)
+
+for (let i = 0; i < products.length; i++) {
+    if (products[i].stock > 0) {
+        availableProducts.push(products[i])
+        totalValue += products[i].price * products[i].stock
+    }
+    productNames.push(products[i].name)
+}
+
+console.log({availableProducts})
+console.log({productNames})
+console.log({totalValue})
+console.log({sortedProducts})
