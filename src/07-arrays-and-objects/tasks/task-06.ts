@@ -24,3 +24,32 @@ const borrowings = [
     { student: "Eka", bookId: 1, days: 4 },
     { student: "Andi", bookId: 3, days: 8 },
 ];
+
+let andiBorrowings = []
+
+let borrowingWithBookInfo = []
+
+andiBorrowings = borrowings.filter(borrowing => borrowing.student === "Andi");
+
+
+let programmingBookBorrowers = []
+
+for (let i = 0; i < borrowings.length; i++) {
+    const borrowing = borrowings[i];
+    const book = books.find(b => b.id === borrowing.bookId);
+    if (book && book.category === "Programming") {
+        programmingBookBorrowers.push(borrowing.student);
+    }
+}
+
+let totalBorrowings = borrowings.length;
+
+let averageBorrowingDuration = borrowings.reduce((total, borrowing) => total + borrowing.days, 0) / totalBorrowings;
+
+let longBorrowers = borrowings.filter(borrowing => borrowing.days > 7).map(borrowing => borrowing.student);
+
+console.log({ andiBorrowings });
+console.log({ programmingBookBorrowers });
+console.log({ totalBorrowings });
+console.log({ averageBorrowingDuration });
+console.log({ longBorrowers });
