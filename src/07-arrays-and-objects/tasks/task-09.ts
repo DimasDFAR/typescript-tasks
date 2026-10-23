@@ -33,3 +33,31 @@ const posts = [
     likes: 300,
   },
 ];
+
+let typescriptPost: {author: string}[] = []
+
+let nestjsPost: {author: string}[] = []
+
+let highestLikes: number = 0
+
+let highestLikesAuthor: string = ""
+
+let totalLikes: number = 0
+
+for (const post of posts) {
+  const currentLikes: number = post.likes
+  for (const hashtag of post.hashtags) {
+    if (hashtag === "typescript") {
+      typescriptPost.push({author: post.author})
+    } else if (hashtag === "nestjs") {
+      nestjsPost.push({author: post.author})
+    }
+    if (currentLikes > highestLikes) {
+      highestLikes = currentLikes
+      highestLikesAuthor = post.author
+    }
+  }
+  totalLikes += post.likes
+}
+
+console.log({typescriptPost, nestjsPost, highestLikesAuthor, totalLikes})
